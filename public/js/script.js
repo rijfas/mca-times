@@ -168,7 +168,6 @@ const renderTimeTable = () => {
 };
 
 const getCurrentHour = () => {
-  return 2;
   if (currentDate.getDay() - 1 !== currentDay) return -1;
   const hour = currentDate.getHours();
   if (hour == 9) return 0;
