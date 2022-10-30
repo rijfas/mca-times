@@ -128,7 +128,12 @@ const TIMETABLE = [
     },
   ],
 ];
-var currentDay = currentDate.getDay() - 1;
+const currentDayIndex = currentDate.getDay() - 1;
+
+var currentDay =
+  currentDayIndex < TIMETABLE.length && currentDayIndex > -1
+    ? currentDayIndex
+    : 0;
 
 const dateDisplay = document.querySelector("#date-display");
 const timetableDisplay = document.querySelector("#timetable-display");
